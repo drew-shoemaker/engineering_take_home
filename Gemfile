@@ -16,6 +16,8 @@ gem "jsbundling-rails"
 # gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
+
+gem "kaminari"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
@@ -47,6 +49,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 6.1.0'
   gem 'factory_bot_rails'
   gem 'faker'
+  gem 'shoulda-matchers'
 end
 
 group :development do
@@ -56,4 +59,3 @@ group :development do
   # Highlight the fine-grained location where an error occurred [https://github.com/ruby/error_highlight]
   gem "error_highlight", ">= 0.4.0", platforms: [:ruby]
 end
-

@@ -1,0 +1,36 @@
+.container {
+  margin-top: 32px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
+  margin-bottom: 32px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-unit) * 2;
+}
+
+.pageButton {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: var(--spacing-unit) var(--spacing-unit) * 2;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+}
+
+.pageButton:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.pageNumber {
+  color: var(--secondary-color);
+  font-weight: 500;
+} 

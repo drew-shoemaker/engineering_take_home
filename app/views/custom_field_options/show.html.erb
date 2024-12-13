@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @custom_field_option %>
+
+<div>
+  <%= link_to "Edit this custom field option", edit_custom_field_option_path(@custom_field_option) %> |
+  <%= link_to "Back to custom field options", custom_field_options_path %>
+
+  <%= button_to "Destroy this custom field option", @custom_field_option, method: :delete %>
+</div>

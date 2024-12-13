@@ -1,0 +1,35 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #34495e;
+  --accent-color: #3498db;
+  --error-color: #e74c3c;
+  --success-color: #2ecc71;
+  --background-color: #f5f6fa;
+  --border-radius: 4px;
+  --spacing-unit: 8px;
+} 
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-unit) * 2;
+}
+
+.title {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-unit) * 3;
+}
+
+.errorMessage {
+  background-color: var(--error-color);
+  color: white;
+  padding: var(--spacing-unit);
+  border-radius: var(--border-radius);
+  margin-bottom: var(--spacing-unit) * 2;
+}
+
+.loadingMessage {
+  text-align: center;
+  color: var(--secondary-color);
+  padding: var(--spacing-unit) * 4;
+} 

@@ -1,0 +1,50 @@
+.card {
+  background: white;
+  border-radius: var(--border-radius);
+  padding: calc(var(--spacing-unit) * 3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  margin: var(--spacing-unit) 0;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.title {
+  color: var(--primary-color);
+  margin: 0 0 var(--spacing-unit);
+}
+
+.clientName {
+  color: var(--secondary-color);
+  font-size: 0.9em;
+  margin-bottom: var(--spacing-unit) * 2;
+}
+
+.customFields {
+  margin: var(--spacing-unit) 0;
+}
+
+.field {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-unit) 0;
+  border-bottom: 1px solid #eee;
+}
+
+.fieldName {
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+.editButton {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: var(--spacing-unit) var(--spacing-unit) * 2;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  width: 100%;
+  margin-top: var(--spacing-unit) * 2;
+} 
