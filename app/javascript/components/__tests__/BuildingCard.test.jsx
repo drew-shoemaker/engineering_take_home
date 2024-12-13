@@ -5,9 +5,28 @@ import BuildingCard from '../BuildingCard';
 describe('BuildingCard', () => {
   const mockBuilding = {
     id: '1',
-    client_name: 'Test Client',
+    client: {
+      name: 'Test Client',
+      custom_fields: [
+        {
+          id: '1',
+          name: 'rock_wall_size',
+          field_type: 'number'
+        }
+      ]
+    },
     address: '123 Test St',
-    rock_wall_size: '15'
+    custom_field_values: [
+      {
+        id: '1',
+        custom_field: {
+          id: '1',
+          name: 'rock_wall_size',
+          field_type: 'number'
+        },
+        value: '15'
+      }
+    ]
   };
 
   const mockOnEdit = jest.fn();
@@ -20,8 +39,8 @@ describe('BuildingCard', () => {
     render(<BuildingCard building={mockBuilding} onEdit={mockOnEdit} />);
     
     expect(screen.getByText('123 Test St')).toBeInTheDocument();
-    expect(screen.getByText('Client: Test Client')).toBeInTheDocument();
-    expect(screen.getByText('rock_wall_size:')).toBeInTheDocument();
+    expect(screen.getByText(/Client: Test Client/)).toBeInTheDocument();
+    expect(screen.getByText(/rock_wall_size:/)).toBeInTheDocument();
     expect(screen.getByText('15')).toBeInTheDocument();
   });
 
@@ -30,5 +49,6 @@ describe('BuildingCard', () => {
     
     fireEvent.click(screen.getByText('Edit Building'));
     expect(mockOnEdit).toHaveBeenCalledTimes(1);
+    expect(mockOnEdit).toHaveBeenCalledWith(mockBuilding);
   });
 }); 

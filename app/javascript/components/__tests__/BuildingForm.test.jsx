@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, fireEvent, screen, waitFor } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import BuildingForm from '../BuildingForm';
 
 describe('BuildingForm', () => {
@@ -28,6 +28,4 @@ describe('BuildingForm', () => {
       expect(screen.getByText('Client 2')).toBeInTheDocument();
     });
   });
-
-  // Add more test cases for form validation, submission, etc.
 }); 

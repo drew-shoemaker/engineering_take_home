@@ -4,7 +4,7 @@ import styles from './BuildingCard.module.css';
 const BuildingCard = ({ building, onEdit }) => {
   const { id, client, address, city, state, zip, custom_field_values } = building;
   
-  // Create a map of existing values
+  // so we can see empty custom fields
   const valueMap = {};
   custom_field_values?.forEach(fieldValue => {
     valueMap[fieldValue.custom_field.id] = fieldValue.value;

@@ -66,7 +66,6 @@ describe('BuildingList', () => {
     expect(previousButton).toBeDisabled();
     expect(nextButton).toBeDisabled();
 
-    // Verify that clicking disabled buttons doesn't trigger onPageChange
     fireEvent.click(previousButton);
     fireEvent.click(nextButton);
     expect(mockOnPageChange).not.toHaveBeenCalled();

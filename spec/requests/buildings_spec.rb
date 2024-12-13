@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-
 RSpec.describe "/api/buildings", type: :request do
 
   let(:client) { create(:client, :with_custom_fields) }
